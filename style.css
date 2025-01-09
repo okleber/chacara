@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    margin-bottom: 60px; /* Adicione esta linha */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Adicione esta linha */
+}
+
+/* Adicione estas novas regras */
+html {
+    height: 100%;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    margin-bottom: 20px;
+}
