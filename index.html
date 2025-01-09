@@ -6,6 +6,12 @@
     <title>Aluguel de Chácara com Piscina</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID");
+        })();
+    </script>
 </head>
 <body>
 <header>
@@ -39,7 +45,7 @@
 
     <section id="contato">
         <h2>Entre em Contato</h2>
-        <form action="enviar_email.php" method="POST">
+        <form id="contact-form">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -60,5 +66,19 @@
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="script.js"></script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function() {
+                alert('Mensagem enviada com sucesso!');
+                window.location.href = 'index.html';
+            }, function(error) {
+                alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
+                console.log('FAILED...', error);
+            });
+    });
+</script>
 </body>
 </html>
