@@ -9,7 +9,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("YOUR_USER_ID");
+            emailjs.init("okleber");
         })();
     </script>
 </head>
@@ -34,13 +34,15 @@
 
     <section id="fotos">
         <h2>Fotos</h2>
-        <p>As fotos da chácara serão adicionadas em breve.</p>
+        <img src="area.jpeg" height="800" width="600"/>
+        <img src="cozinha.jpeg" height="800" width="600"/>
+        <img src="quarto2.jpeg" height="800" width="600"/>
+        <img src="sala.jpeg" height="800" width="600"/>
     </section>
-
     <section id="localizacao">
         <h2>Localização Aproximada</h2>
         <p>Ao efetuar a reserva solicite a localização exata</p>
-        <div id="mapa"></div>
+        <div id="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4736.184297084623!2d-47.0764433159025!3d-23.616241196097207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbr!4v1736388704787!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </section>
 
     <section id="contato">
@@ -65,7 +67,7 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="script.js"></script>
+
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
